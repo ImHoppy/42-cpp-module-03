@@ -4,7 +4,7 @@ CC			=	c++
 
 CFLAGS		=	-Wall -Wextra -Werror -g3 -std=c++98 -I.
 ifeq ($(DEBUG), 1)
-	CFLAGS		+= -DDEBUG=1
+	CFLAGS		+= -DDEBUG_LOG=1
 endif
 
 SRCS		=	main.cpp ClapTrap.cpp
