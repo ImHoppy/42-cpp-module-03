@@ -1,6 +1,5 @@
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
-#include <iostream>
 #include <fstream>
 
 #define MAIN_LOG(A) std::cout << "\033[3;35m" << A << "\033[0m" << std::endl
@@ -8,14 +7,14 @@
 int main()
 {
 	MAIN_LOG("Initialize");
-	ScavTrap a("Dinklebot");
-	ScavTrap c;
+	FragTrap a("Dinklebot");
+	FragTrap c;
 	{
 		MAIN_LOG("Test inherit");
-		ScavTrap *d = new ScavTrap("Henry");
+		FragTrap *d = new FragTrap("Henry");
 		ClapTrap e = *d;
 		e.takeDamage(1);
-		ScavTrap b(a);
+		FragTrap b(a);
 
 		b.takeDamage(1000);
 		b.beRepaired(1);
@@ -23,7 +22,7 @@ int main()
 	}
 	c.beRepaired(1);
 
-	MAIN_LOG("A loosing 50 energy and C goind to die");
+	MAIN_LOG("A loosing 100 energy and C goind to die");
 	{
 
 		std::streambuf *coutBackup = std::cout.rdbuf();
@@ -32,10 +31,10 @@ int main()
 		out.open("/dev/null");
 		std::cout.rdbuf(out.rdbuf());
 
-		for (int i = 49; i; i--)
+		for (int i = 99; i; i--)
 		{
 			a.attack("Bob");
-			c.takeDamage(2);
+			c.takeDamage(1);
 		}
 		std::cout.rdbuf(coutBackup);
 	}
@@ -44,8 +43,9 @@ int main()
 	a.attack("Bob");
 	a.attack("Bob");
 	MAIN_LOG("Test if C can still do action when dead");
-	c.guardGate();
+	c.highFivesGuys();
 	c.beRepaired(1);
-	c.takeDamage(4);
-	c.guardGate();
+	c.takeDamage(1);
+	c.takeDamage(2);
+	c.highFivesGuys();
 }
