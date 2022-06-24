@@ -1,10 +1,18 @@
 #include "FragTrap.hpp"
 
 #include <fstream>
+#include "DiamondTrap.hpp"
 
 #define MAIN_LOG(A) std::cout << "\033[3;35m" << A << "\033[0m" << std::endl
 
+
 int main()
+{
+	DiamondTrap a("Bob");
+	return (0);
+}
+
+int main_old()
 {
 	MAIN_LOG("Initialize");
 	FragTrap a("Dinklebot");
@@ -48,4 +56,6 @@ int main()
 	c.takeDamage(1);
 	c.takeDamage(2);
 	c.highFivesGuys();
+	
+	return (0);
 }
