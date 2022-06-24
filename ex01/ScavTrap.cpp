@@ -80,7 +80,7 @@ void	ScavTrap::attack(const std::string &target)
 	else if (this->_hitPoints == 0)
 		PRINT(" cannot perform an action while dead.");
 	else {
-		PRINT(" attacks " << target << ", causing " << this->_AttackDamage << " points of damage!");
+		PRINT(" attacks " << target << " with his fists, causing " << this->_AttackDamage << " points of damage!");
 		this->_EnergyPoints--;
 	}
 }

@@ -66,7 +66,7 @@ void	ScavTrap::guardGate(void)
 	if (this->_EnergyPoints == 0)
 		PRINT(" not enought energy points.");
 	else if (this->_hitPoints == 0)
-		PRINT("  cannot perform an action while dead.  ");
+		PRINT(" cannot perform an action while dead.  ");
 	else
 		PRINT(" becomes the gatekeeper.");
 }
@@ -78,9 +78,9 @@ void	ScavTrap::attack(const std::string &target)
 	if (this->_EnergyPoints == 0)
 		PRINT(" not enought energy points.");
 	else if (this->_hitPoints == 0)
-		PRINT(" cannot perform an action while dead.  ");
+		PRINT(" cannot perform an action while dead.");
 	else {
-		PRINT(" attacks " << target << ", causing " << this->_AttackDamage << " points of damage!");
+		PRINT(" attacks " << target << " with his fists, causing " << this->_AttackDamage << " points of damage!");
 		this->_EnergyPoints--;
 	}
 }
