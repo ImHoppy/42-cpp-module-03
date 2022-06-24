@@ -61,7 +61,7 @@ ScavTrap &				ScavTrap::operator=( ScavTrap const & rhs )
 
 void	ScavTrap::guardGate(void)
 {
-	DEBUG("guardGate method called in ScapTrap.");
+	DEBUG("guardGate method called in ScavTrap.");
 
 	if (this->_EnergyPoints == 0)
 		PRINT(" not enought energy points.");
@@ -73,7 +73,7 @@ void	ScavTrap::guardGate(void)
 
 void	ScavTrap::attack(const std::string &target)
 {
-	DEBUG("attack method called in ScapTrap.");
+	DEBUG("attack method called in ScavTrap.");
 
 	if (this->_EnergyPoints == 0)
 		PRINT(" not enought energy points.");
