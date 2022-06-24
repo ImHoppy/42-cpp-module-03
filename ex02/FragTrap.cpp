@@ -63,7 +63,7 @@ FragTrap &				FragTrap::operator=( FragTrap const & rhs )
 
 void	FragTrap::highFivesGuys(void)
 {
-	DEBUG("highFivesGuys method called in ScapTrap.");
+	DEBUG("highFivesGuys method called in FragTrap.");
 
 	if (this->_EnergyPoints == 0)
 		PRINT(" not enought energy points.");
