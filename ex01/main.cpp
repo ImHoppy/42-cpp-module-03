@@ -1,5 +1,8 @@
 #include "ScavTrap.hpp"
 
+#include <iostream>
+#include <fstream>
+
 #define MAIN_LOG(A) std::cout << "\033[3;35m" << A << "\033[0m" << std::endl
 
 int main()
@@ -21,15 +24,28 @@ int main()
 	c.beRepaired(1);
 
 	MAIN_LOG("A loosing 10 energy and C goind to die");
-	for (int i = 10; i; i--)
 	{
-		a.attack("Bob");
-		c.takeDamage(10);
+
+		std::streambuf *coutBackup = std::cout.rdbuf();
+
+		std::ofstream out;
+		out.open("/dev/null");
+		std::cout.rdbuf(out.rdbuf());
+
+		for (int i = 49; i; i--)
+		{
+			a.attack("Bob");
+			c.takeDamage(2);
+		}
+		std::cout.rdbuf(coutBackup);
 	}
-	MAIN_LOG("Test if C can still do action when dead");
+
+	MAIN_LOG("Test if A can still do action without energy");
 	a.attack("Bob");
+	a.attack("Bob");
+	MAIN_LOG("Test if C can still do action when dead");
+	c.guardGate();
 	c.beRepaired(1);
-	c.takeDamage(2);
-	c.takeDamage(1);
+	c.takeDamage(4);
 	c.guardGate();
 }
