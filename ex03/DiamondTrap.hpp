@@ -7,7 +7,7 @@
 # include "ScavTrap.hpp"
 # include "FragTrap.hpp"
 
-class DiamondTrap : public FragTrap, public ScavTrap
+class DiamondTrap :  public ScavTrap, public FragTrap
 {
 
 	public:
@@ -29,7 +29,5 @@ class DiamondTrap : public FragTrap, public ScavTrap
 		using ScavTrap::_EnergyPoints;
 		using FragTrap::_AttackDamage;
 };
-
-std::ostream &			operator<<( std::ostream & o, DiamondTrap const & i );
 
 #endif /* DIAMONDTRAP_H */

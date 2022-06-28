@@ -11,8 +11,9 @@
 
 /* ------------------------------- CONSTRUCTOR ------------------------------ */
 
-DiamondTrap::DiamondTrap()
+DiamondTrap::DiamondTrap() : ScavTrap(), FragTrap("Marvin_clap_name")
 {
+	this->_name = "Marvin";
 }
 
 DiamondTrap::DiamondTrap( const DiamondTrap & src )
@@ -44,12 +45,12 @@ DiamondTrap &				DiamondTrap::operator=( DiamondTrap const & rhs )
 	return *this;
 }
 
-
 /* -------------------------------- METHODS --------------------------------- */
 
 void	DiamondTrap::whoAmI(void)
 {
-	
+	std::cout << "\033[1m" << "DiamondTrap " << "My name is " << this->_name << "\033[0m" << std::endl;
+	std::cout << "\033[1m" << "ClapTrap " << "My name is " << ClapTrap::_name << "\033[0m" << std::endl;
 }
 
 

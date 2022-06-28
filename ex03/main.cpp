@@ -8,21 +8,15 @@
 
 int main()
 {
-	DiamondTrap a("Bob");
-	return (0);
-}
-
-int main_old()
-{
 	MAIN_LOG("Initialize");
-	FragTrap a("Dinklebot");
-	FragTrap c;
+	DiamondTrap a("Dinklebot");
+	DiamondTrap c;
 	{
 		MAIN_LOG("Test inherit");
-		FragTrap *d = new FragTrap("Henry");
-		ClapTrap e = *d;
+		DiamondTrap *d = new DiamondTrap("Henry");
+		FragTrap e = *d;
 		e.takeDamage(1);
-		FragTrap b(a);
+		DiamondTrap b(a);
 
 		b.takeDamage(1000);
 		b.beRepaired(1);
@@ -39,10 +33,10 @@ int main_old()
 		out.open("/dev/null");
 		std::cout.rdbuf(out.rdbuf());
 
-		for (int i = 99; i; i--)
+		for (int i = 49; i; i--)
 		{
 			a.attack("Bob");
-			c.takeDamage(1);
+			c.takeDamage(2);
 		}
 		std::cout.rdbuf(coutBackup);
 	}
@@ -52,10 +46,11 @@ int main_old()
 	a.attack("Bob");
 	MAIN_LOG("Test if C can still do action when dead");
 	c.highFivesGuys();
+	c.whoAmI();
 	c.beRepaired(1);
 	c.takeDamage(1);
 	c.takeDamage(2);
-	c.highFivesGuys();
+	c.whoAmI();
 	
 	return (0);
 }
