@@ -29,7 +29,7 @@ FragTrap::FragTrap( std::string const & name ) : ClapTrap(name)
 	this->_AttackDamage = 30;
 }
 
-FragTrap::FragTrap( const FragTrap & src )
+FragTrap::FragTrap( const FragTrap & src ) : ClapTrap()
 {
 	LOG( this->_name << " gets cloned with FragTrap brain!" );
 	DEBUG( "FragTrap copy constructor" );
