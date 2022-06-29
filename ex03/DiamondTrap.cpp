@@ -11,7 +11,7 @@
 
 /* ------------------------------- CONSTRUCTOR ------------------------------ */
 
-DiamondTrap::DiamondTrap() : ScavTrap(), FragTrap("Marvin_clap_name")
+DiamondTrap::DiamondTrap() : ClapTrap("Marvin_clap_name"), ScavTrap(), FragTrap("Marvin_clap_name")
 {
 	this->_name = "Marvin";
 }
@@ -22,7 +22,7 @@ DiamondTrap::DiamondTrap( const DiamondTrap & src )
 	// ClapTrap::operator=(src);
 }
 
-DiamondTrap::DiamondTrap( std::string const & name ) : ScavTrap(), FragTrap(name + "_clap_name")
+DiamondTrap::DiamondTrap( std::string const & name ) : ClapTrap(name + "_clap_name"), ScavTrap(), FragTrap()
 {
 	this->_name = name;
 }
