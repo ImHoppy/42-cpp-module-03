@@ -11,7 +11,7 @@
 
 /* ------------------------------- CONSTRUCTOR ------------------------------ */
 
-DiamondTrap::DiamondTrap() : ClapTrap("Marvin_clap_name"), ScavTrap(), FragTrap("Marvin_clap_name")
+DiamondTrap::DiamondTrap() : ClapTrap("Marvin_clap_name"), ScavTrap(), FragTrap()
 {
 	this->_name = "Marvin";
 }
@@ -27,13 +27,11 @@ DiamondTrap::DiamondTrap( std::string const & name ) : ClapTrap(name + "_clap_na
 	this->_name = name;
 }
 
-
 /* ------------------------------- DESTRUCTOR ------------------------------- */
 
 DiamondTrap::~DiamondTrap()
 {
 }
-
 
 /* -------------------------------- OVERLOAD -------------------------------- */
 
@@ -41,9 +39,9 @@ DiamondTrap &				DiamondTrap::operator=( DiamondTrap const & rhs )
 {
 	if ( this != &rhs )
 	{
-		_hitPoints =   	rhs._hitPoints;
-		_EnergyPoints = rhs._EnergyPoints;
-		_AttackDamage = rhs._AttackDamage;
+		_hitPoints		= rhs._hitPoints;
+		_EnergyPoints	= rhs._EnergyPoints;
+		_AttackDamage	= rhs._AttackDamage;
 	}
 	return *this;
 }
