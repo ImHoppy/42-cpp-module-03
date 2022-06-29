@@ -10,8 +10,8 @@ class ClapTrap
 	public:
 
 		ClapTrap();
-		ClapTrap( ClapTrap const & src );
 		ClapTrap( std::string const & name );
+		ClapTrap( ClapTrap const & src );
 		virtual ~ClapTrap();
 
 		void	attack(const std::string & target);

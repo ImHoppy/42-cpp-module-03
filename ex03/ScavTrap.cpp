@@ -29,7 +29,7 @@ ScavTrap::ScavTrap( std::string const & name ) : ClapTrap(name)
 	this->_AttackDamage = 20;
 }
 
-ScavTrap::ScavTrap( const ScavTrap & src )
+ScavTrap::ScavTrap( ScavTrap const & src ) : ClapTrap()
 {
 	LOG( this->_name << " gets cloned with ScavTrap brain!" );
 	DEBUG( "ScavTrap copy constructor" );

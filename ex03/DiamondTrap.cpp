@@ -16,7 +16,7 @@ DiamondTrap::DiamondTrap() : ScavTrap(), FragTrap("Marvin_clap_name")
 	this->_name = "Marvin";
 }
 
-DiamondTrap::DiamondTrap( const DiamondTrap & src )
+DiamondTrap::DiamondTrap( const DiamondTrap & src ) : ClapTrap(), ScavTrap(), FragTrap()
 {
 	*this = src;
 	// ClapTrap::operator=(src);
