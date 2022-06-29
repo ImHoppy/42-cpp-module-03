@@ -18,7 +18,8 @@ DiamondTrap::DiamondTrap() : ScavTrap(), FragTrap("Marvin_clap_name")
 
 DiamondTrap::DiamondTrap( const DiamondTrap & src )
 {
-	ClapTrap::operator=(src);
+	*this = src;
+	// ClapTrap::operator=(src);
 }
 
 DiamondTrap::DiamondTrap( std::string const & name ) : ScavTrap(), FragTrap(name + "_clap_name")
@@ -40,7 +41,9 @@ DiamondTrap &				DiamondTrap::operator=( DiamondTrap const & rhs )
 {
 	if ( this != &rhs )
 	{
-		ClapTrap::operator=(rhs);
+		_hitPoints =   	rhs._hitPoints;
+		_EnergyPoints = rhs._EnergyPoints;
+		_AttackDamage = rhs._AttackDamage;
 	}
 	return *this;
 }
