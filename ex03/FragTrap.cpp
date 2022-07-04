@@ -16,7 +16,7 @@ FragTrap::FragTrap() : ClapTrap()
 {
 	LOG( this->_name << " is born with FragTrap brain!" );
 	this->_hitPoints = 100;
-	// NOTE: This is not beautiful. Need to find a other way!! Ask student gtoubol
+	// NOTE: This is not beautiful. Need to find a other way!! Ask student 
 	if (this->_EnergyPoints != 50)
 		this->_EnergyPoints = 100;
 	this->_AttackDamage = 30;
