@@ -46,11 +46,11 @@ int main()
 	a.attack("Bob");
 	MAIN_LOG("Test if C can still do action when dead");
 	c.highFivesGuys();
-	c.whoAmI();
 	c.beRepaired(1);
 	c.takeDamage(1);
 	c.takeDamage(2);
 	c.whoAmI();
+	a.whoAmI();
 	
 	return (0);
 }
