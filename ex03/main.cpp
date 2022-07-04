@@ -47,8 +47,8 @@ int main()
 	MAIN_LOG("Test if C can still do action when dead");
 	c.highFivesGuys();
 	c.beRepaired(1);
+	c.takeDamage(4);
 	c.takeDamage(1);
-	c.takeDamage(2);
 	c.whoAmI();
 	a.whoAmI();
 	

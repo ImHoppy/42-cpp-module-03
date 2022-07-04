@@ -16,7 +16,9 @@ FragTrap::FragTrap() : ClapTrap()
 {
 	LOG( this->_name << " is born with FragTrap brain!" );
 	this->_hitPoints = 100;
-	this->_EnergyPoints = 100;
+	// NOTE: This is not beautiful. Need to find a other way!! Ask student gtoubol
+	if (this->_EnergyPoints != 50)
+		this->_EnergyPoints = 100;
 	this->_AttackDamage = 30;
 }
 
@@ -25,7 +27,8 @@ FragTrap::FragTrap( std::string const & name ) : ClapTrap(name)
 	LOG( this->_name << " is born with FragTrap brain!" );
 	// *this = FragTrap(); // lol
 	this->_hitPoints = 100;
-	this->_EnergyPoints = 100;
+	if (this->_EnergyPoints != 50)
+		this->_EnergyPoints = 100;
 	this->_AttackDamage = 30;
 }
 
